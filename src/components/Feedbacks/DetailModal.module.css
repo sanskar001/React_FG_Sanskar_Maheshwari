@@ -1,0 +1,116 @@
+/* =============== DETAIL MODAL STYLING ================ */
+
+/* ------- BACKDROP STYLING -------- */
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(240, 248, 252, 0.1);
+  backdrop-filter: blur(3px);
+  z-index: 20;
+}
+
+/* ------- MODAL STYLING -------- */
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  width: 40%;
+  max-width: 500px;
+  min-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px 5px rgba(190, 190, 190, 0.25);
+  border-radius: 10px;
+  opacity: 0;
+  z-index: 30;
+  animation: popUpModal 0.2s ease-in forwards;
+}
+
+@keyframes popUpModal {
+  from {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* --- HEADER STYLING --- */
+
+.modal header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal h2 {
+  color: #48a44c;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* --- MAIN BODY STYLING --- */
+
+.personal_info p {
+  margin: 15px 0px;
+  font-weight: 500;
+  color: #404b69;
+}
+
+.personal_info p:first-child span {
+  text-transform: capitalize;
+}
+
+.personal_info span {
+  font-weight: 400;
+  color: #565865;
+  margin-left: 2px;
+}
+
+.question_info div {
+  margin: 15px 0px;
+}
+
+.question_info p {
+  font-weight: 500;
+  color: #404b69;
+  margin-bottom: 5px;
+}
+
+.question_info span {
+  display: inline-block;
+  padding: 5px 10px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #565865;
+  background-color: #e9e9e9;
+  border: 1px solid #565865;
+  border-radius: 5px;
+}
+
+/* --- FOOTER STYLING --- */
+
+.modal footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.close_btn {
+  height: 45px;
+  width: 120px;
+  color: #fff;
+  background-color: #8870c9;
+  border-radius: 5px;
+}
+
+.close_btn:hover,
+.close_btn:active {
+  background-color: #7d67b8;
+}

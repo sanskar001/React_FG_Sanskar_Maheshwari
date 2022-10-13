@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Feedbacks from "./components/Feedbacks/Feedbacks";
+import NewFeedback from "./components/NewFeedback/NewFeedback";
 
-function App() {
+const App = () => {
+  const [showFeedbackForm, setShowFeedbackForm] = useState(true);
+
+  const showFeedbackFormHandler = () => {
+    setShowFeedbackForm(true);
+  };
+
+  const closeFeedbackFormHandler = () => {
+    setShowFeedbackForm(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      {!showFeedbackForm && <Feedbacks onShowForm={showFeedbackFormHandler} />}
+      {showFeedbackForm && (
+        <NewFeedback onCloseForm={closeFeedbackFormHandler} />
+      )}
+    </React.Fragment>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,71 @@
+.feedback_form {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f0f8fc;
+
+  /* CSS VARAIBLES */
+  --label-color: #202337;
+  --required-color: #ea508b;
+  --input-color: #8870c9;
+}
+
+/* -------- FORM HEADER STYLING ---------- */
+
+.feedback_form header {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #e6e6e6;
+}
+
+.feedback_form header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--label-color);
+}
+
+/* ---------- FORM INPUT CONTAINER ---------- */
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 20px 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #e6e6e6;
+  margin-bottom: 20px;
+}
+
+/* ---- QUESTION CONTAINER STYLING ---- */
+
+.questions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 30px;
+  column-gap: 100px;
+}
+
+/* ----- FORM SUBMIT BUTTON STYLING ----- */
+
+.actions {
+  width: 100%;
+  text-align: right;
+}
+
+.submit_btn {
+  height: 45px;
+  padding: 0px 20px;
+  color: #fff;
+  background-color: #48a44c;
+  border-radius: 5px;
+}
+
+.submit_btn:hover,
+.submit_btn:active {
+  background-color: #3e8942;
+}

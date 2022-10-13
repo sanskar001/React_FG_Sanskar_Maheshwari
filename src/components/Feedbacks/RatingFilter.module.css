@@ -1,0 +1,87 @@
+/* ---- FILTER BUTTON STYLING ---- */
+
+.filter_btn {
+  width: 24px;
+  height: 24px;
+  color: var(--text-color);
+  background-color: transparent;
+  border-radius: 3px;
+  font-size: 24px;
+}
+
+/* ---- RATING FILTER DROPDOWN STYLING ---- */
+
+.rating_filter {
+  position: absolute;
+  bottom: -120px;
+  right: 10px;
+  z-index: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transform: scaleY(0);
+  transform-origin: top center;
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  animation: moveDown 0.3s ease forwards;
+}
+
+@keyframes moveDown {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.filter_list {
+  list-style: none;
+}
+
+.filter_list li {
+  margin: 5px 0px;
+  text-align: left;
+}
+
+.filter_list input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--text-color);
+  border-radius: 2px;
+  position: relative;
+  transition: border 0.2s ease;
+}
+
+.filter_list input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: bottom left;
+  transition: transform 0.1s ease;
+  background-color: #fff;
+  clip-path: polygon(13% 50%, 34% 66%, 81% 2%, 100% 18%, 39% 100%, 0 71%);
+}
+
+.filter_list input[type="radio"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.filter_list input[type="radio"]:checked {
+  background-color: #005cc8;
+  border: 1px solid #005cc8;
+}
+
+.filter_list label span {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 5px;
+  text-transform: capitalize;
+}

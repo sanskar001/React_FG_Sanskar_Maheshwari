@@ -1,0 +1,89 @@
+/* ========= FEEDBACK TABLE STYLING ========== */
+
+.feedback_table {
+  width: 100%;
+  flex: 1;
+}
+
+.feedback_wrapper {
+  width: 100%;
+  max-height: 75vh;
+  overflow: auto;
+  position: relative;
+  background-color: #fff;
+}
+
+/* COMMAN TABLE STYLING */
+
+.table,
+.table td,
+.table th {
+  border: 1px solid #dfdfdf;
+  border-collapse: collapse;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.table input {
+  width: 16px;
+  height: 16px;
+}
+
+/* TABLE HEAD STYLING */
+
+.table thead {
+  background-color: #efe9fb;
+  position: sticky;
+  top: -1px;
+  z-index: 10;
+}
+
+.table th {
+  padding: 16px 24px;
+  color: var(--text-color);
+}
+
+/* TABLE BODY STYLING */
+
+.table tbody {
+  background-color: #fff;
+}
+
+.table td {
+  padding: 20px 24px;
+  color: var(--text-color);
+}
+
+.table td:nth-child(3),
+.table td:nth-child(6),
+.table td:nth-child(7),
+.table td:nth-child(8),
+.table td:nth-child(9) {
+  text-transform: capitalize;
+}
+
+.table td button {
+  text-decoration: none;
+  color: blueviolet;
+  background-color: transparent;
+}
+
+.not_found {
+  width: 100%;
+  color: var(--text-color);
+  font-size: 18px;
+  padding: 30px 0px;
+  text-align: center;
+}
+
+/* OVERALL RATING FILTER  */
+
+.service_rating,
+.beverage_rating,
+.hygiene_rating,
+.overall_rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}

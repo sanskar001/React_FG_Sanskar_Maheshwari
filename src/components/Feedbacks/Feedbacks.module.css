@@ -1,0 +1,158 @@
+/* =========== FEEDBACKS STYLING =========== */
+
+.feedbacks {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f0f8fc;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* CSS VARIABLES */
+  --text-color: #565865;
+}
+
+/* ----- HEADER STYLING ----- */
+
+.feedbacks header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+/* -- HEADER LEFT SIDE -- */
+
+.feedbacks h2 {
+  color: var(--text-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.filter_info {
+  font-size: 16px;
+  color: var(--text-color);
+  margin-top: 5px;
+}
+
+/* -- HEADER RIGHT SIDE -- */
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* SEARCH INPUT STYLING */
+
+.search_input {
+  position: relative;
+}
+
+.search_input label {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-40%);
+  font-size: 28px;
+  color: #d4d4d4;
+}
+
+.search_input input {
+  display: inline-block;
+  width: 250px;
+  height: 45px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.search_input input::placeholder {
+  color: #d4d4d4;
+}
+
+.search_input input:focus {
+  border: 1px solid #a5a5a5;
+}
+
+.search_input input:focus + label {
+  display: none;
+}
+
+/* RESET BUTTON STYLING */
+
+.reset_btn {
+  height: 45px;
+  padding: 0px 10px;
+  background-color: #fff;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.reset_btn svg path {
+  stroke: #d4d4d4;
+  transition: all 0.3s ease;
+}
+
+.reset_btn:hover {
+  border: 1px solid #a5a5a5;
+}
+
+.reset_btn:hover svg path {
+  stroke: #a5a5a5;
+}
+
+/* ADD FEEDBACK BUTTON STYLING */
+
+.add_btn {
+  height: 45px;
+  padding: 0px 20px;
+  color: #fff;
+  background-color: #48a44c;
+  border-radius: 5px;
+}
+
+.add_btn:hover,
+.add_btn:active {
+  background-color: #3e8942;
+}
+
+/* ----- FOOTER STYLING ----- */
+
+.feedbacks footer {
+  padding: 10px 0px;
+  text-align: right;
+}
+
+.delete_btn {
+  height: 45px;
+  padding: 0px 24px;
+  color: #fff;
+  background-color: #ea4c89;
+  border-radius: 5px;
+  transform: scale(0);
+  opacity: 0;
+  animation: showUpBtn 0.2s ease 1 forwards;
+}
+
+@keyframes showUpBtn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.delete_btn:hover,
+.delete_btn:active {
+  background-color: #d1447a;
+}

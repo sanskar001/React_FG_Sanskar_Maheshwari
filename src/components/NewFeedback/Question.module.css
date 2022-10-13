@@ -1,0 +1,86 @@
+/* --------- QUESTION STYLING ---------- */
+
+.question_text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--label-color);
+}
+
+.question_text::after {
+  content: "*";
+  color: var(--required-color);
+}
+
+/* ------ ERROR MESSAGE ------- */
+
+.error {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #e5636f;
+}
+
+/* ------ OPTIONS LIST STYLING ------- */
+
+.option_list {
+  width: 100%;
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 23px;
+}
+
+.option_list li {
+  display: flex;
+  align-items: center;
+}
+
+.option_list label span {
+  font-size: 16px;
+  color: var(--label-color);
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+/* ---- RADIO BUTTON STYLING --- */
+
+.option_list input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--label-color);
+  border-radius: 2px;
+  position: relative;
+  transition: border 0.2s ease;
+}
+
+.option_list input[type="radio"]:hover {
+  border: 1px solid var(--input-color);
+}
+
+.option_list input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: bottom left;
+  transition: transform 0.1s ease;
+  background-color: #fff;
+  clip-path: polygon(13% 50%, 34% 66%, 81% 2%, 100% 18%, 39% 100%, 0 71%);
+}
+
+.option_list input[type="radio"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.option_list input[type="radio"]:checked {
+  background-color: var(--input-color);
+  border: 1px solid var(--input-color);
+}
